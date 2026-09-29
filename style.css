@@ -1,0 +1,103 @@
+:root {
+  --color-black: #000000;
+  --color-purple: #c000ff;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-purple);
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  background-color: var(--color-black);
+  color: var(--color-purple);
+}
+
+.jumbotron .img-thumbnail {
+  background-color: var(--color-purple);
+  border-color: var(--color-purple);
+}
+
+.site-nav,
+.site-footer {
+  background-color: var(--color-black);
+  color: var(--color-purple);
+}
+
+.site-nav .navbar-brand,
+.site-nav .nav-link,
+.site-footer a {
+  color: var(--color-purple);
+}
+
+.site-nav .navbar-toggler {
+  border-color: var(--color-purple);
+}
+
+.site-nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c000ff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.btn-primary {
+  background-color: var(--color-purple);
+  border-color: var(--color-purple);
+  color: var(--color-black);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-black);
+  border-color: var(--color-purple);
+  color: var(--color-purple);
+}
+
+#project {
+  background-color: #ffffff;
+  color: var(--color-black);
+}
+
+#about {
+  background-color: var(--color-purple);
+  color: var(--color-black);
+}
+
+#contact {
+  background-color: #f4e8ff;
+  color: var(--color-black);
+}
+
+#project .card,
+#project .card-body {
+  background-color: #ffffff;
+  border-color: var(--color-purple);
+  color: var(--color-black);
+}
+
+#project .card {
+  border-width: 2px;
+}
+
+#project h2 {
+  color: var(--color-purple);
+}
+
+#contact .form-control {
+  background-color: #ffffff;
+  border-color: var(--color-purple);
+  color: var(--color-black);
+}
+
+#contact .form-control:focus {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 0 0.2rem rgba(192, 0, 255, 0.2);
+}
+
+#contact .form-control::placeholder {
+  color: var(--color-black);
+}
+
+#project .project-image-portrait {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
