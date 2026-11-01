@@ -819,3 +819,70 @@ textarea {
         animation-iteration-count: 1 !important;
     }
 }
+```css
+/* ===== NEON PURPLE BORDER ===== */
+
+/* Border card About */
+#about .about-card {
+    border: 1px solid #a000ff !important;
+    border-radius: 18px;
+    box-shadow: 0 0 8px rgba(160, 0, 255, 0.12);
+    transition: 0.3s ease;
+}
+
+#about .about-card:hover {
+    border-color: #d000ff !important;
+    box-shadow: 0 0 18px rgba(160, 0, 255, 0.3);
+}
+
+/* Border card Projects */
+#projects .project-card {
+    border: 1px solid #a000ff !important;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(160, 0, 255, 0.12);
+    transition: 0.3s ease;
+}
+
+#projects .project-card:hover {
+    border-color: #d000ff !important;
+    box-shadow: 0 0 20px rgba(160, 0, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Border foto profil */
+.hero-image-wrapper {
+    border: 4px solid #a000ff !important;
+    border-radius: 50% !important;
+    padding: 5px;
+    box-shadow:
+        0 0 8px #a000ff,
+        0 0 20px rgba(160, 0, 255, 0.45);
+    transition: 0.3s ease;
+}
+
+.hero-image-wrapper:hover {
+    box-shadow:
+        0 0 12px #a000ff,
+        0 0 30px rgba(160, 0, 255, 0.7);
+}
+
+.hero-image {
+    border-radius: 50% !important;
+}
+
+/* Border tombol outline */
+.btn-outline-purple {
+    border: 1px solid #a000ff !important;
+    transition: 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+    box-shadow: 0 0 12px rgba(160, 0, 255, 0.5);
+}
+
+/* Border navbar */
+.navbar {
+    border-bottom: 1px solid rgba(160, 0, 255, 0.2);
+}
+```
