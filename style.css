@@ -222,3 +222,67 @@ section,
     }
 }
 ```
+```css
+/* ===== FORCE NEON PURPLE BORDERS ===== */
+
+/* ABOUT CARDS */
+#about .about-card {
+    border: 2px solid #c000ff !important;
+    outline: none !important;
+    box-shadow: 0 0 12px rgba(192, 0, 255, 0.20) !important;
+    border-radius: 18px !important;
+    background: #12101a !important;
+}
+
+/* PROJECT CARDS */
+#projects .project-card {
+    border: 2px solid #c000ff !important;
+    outline: none !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+    background: #12101a !important;
+    box-shadow: 0 0 12px rgba(192, 0, 255, 0.25) !important;
+}
+
+/* BORDER GAMBAR PROFIL */
+.hero-image-wrapper {
+    border: 2px solid #c000ff !important;
+    box-shadow:
+        0 0 10px #c000ff,
+        0 0 25px rgba(192, 0, 255, 0.45) !important;
+}
+
+/* CONTACT BOX */
+#contact .contact-wrapper {
+    border: 2px solid #c000ff !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0 15px rgba(192, 0, 255, 0.2) !important;
+}
+
+/* BORDER NAVBAR DAN FOOTER */
+.navbar {
+    border-bottom: 1px solid #c000ff !important;
+}
+
+.site-footer {
+    border-top: 1px solid #c000ff !important;
+}
+
+/* JAGA BACKGROUND TETAP HITAM */
+html,
+body,
+#home,
+#about,
+#projects,
+#contact {
+    background-color: #08080d !important;
+    color: #f7f4fb !important;
+}
+
+/* HOVER NEON */
+#about .about-card:hover,
+#projects .project-card:hover {
+    border-color: #e05aff !important;
+    box-shadow: 0 0 22px rgba(192, 0, 255, 0.5) !important;
+}
+```
