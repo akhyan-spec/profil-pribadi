@@ -1,389 +1,506 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08080d">
 
-  <meta name="theme-color" content="#08080c">
-  <meta name="description" content="Portofolio pribadi Hario Nur Akhyan, pelajar dan web developer pemula dari SMKN 1 Tanjungpandan.">
+    <title>Hario Nur Akhyan | Portfolio</title>
 
-  <title>Hario Nur Akhyan | Personal Portfolio</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
-    <div class="container">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
 
-      <a class="navbar-brand" href="#home">
-        AKHYAN<span>.</span>
-      </a>
+            <a class="navbar-brand" href="#home">
+                AKHYAN<span>.</span>
+            </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Buka navigasi"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Buka navigasi">
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#project">Projects</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-  <header id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-
-        <div class="hero-image-wrapper">
-          <img
-            src="https://i.pinimg.com/474x/93/44/40/93444022aabf9ab161e945c579417786.jpg"
-            alt="Foto profil Hario Nur Akhyan"
-            class="hero-image"
-            width="200"
-            height="200"
-          >
         </div>
+    </nav>
 
-        <p class="hero-greeting">HALO, SELAMAT DATANG DI WEBSITE GUA</p>
 
-        <h1>Hario Nur <span>Akhyan</span></h1>
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center gy-5">
 
-        <p class="hero-description">
-          Pelajar SMKN 1 Tanjungpandan yang tertarik dengan
-          <span>Web Development</span>, teknologi, dan hal-hal baru.
-        </p>
+                <div class="col-lg-7 hero-content">
 
-        <div class="hero-buttons">
-          <a href="#project" class="btn btn-purple">
-            Lihat Proyek
-          </a>
+                    <div class="hero-badge">
+                        <i class="bi bi-code-slash"></i>
+                        Student & Aspiring Web Developer
+                    </div>
 
-          <a href="#about" class="btn btn-outline-purple">
-            Tentang Gua
-          </a>
+                    <h1 class="hero-title">
+                        Hi, I'm<br>
+                        <span>Hario Nur Akhyan.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Seorang pelajar yang sedang belajar web development,
+                        mengeksplorasi hal baru, dan membangun sesuatu melalui
+                        kreativitas serta teknologi.
+                    </p>
+
+                    <a href="#projects" class="btn-purple">
+                        Lihat Project
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+
+                    <a href="#about" class="btn-outline-purple">
+                        Tentang Saya
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-image-wrapper">
+                        <img
+                            src="https://i.pinimg.com/474x/93/44/40/93444022aabf9ab161e945c579417786.jpg"
+                            alt="Profile Hario Nur Akhyan"
+                            class="hero-image">
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="scroll-indicator" aria-hidden="true">
-          <span></span>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="section-dark">
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Sedikit cerita tentang saya dan hal yang saya sukai.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="about-card">
+
+                        <div class="about-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+
+                        <h3>Who Am I?</h3>
+
+                        <p>
+                            Halo! Saya Hario Nur Akhyan, seorang siswa
+                            yang tertarik dengan teknologi dan web development.
+                            Saat ini saya terus belajar dan mengembangkan
+                            kemampuan untuk membuat website yang menarik
+                            dan fungsional.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="about-card">
+
+                        <div class="about-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+
+                        <h3>My Interests</h3>
+
+                        <ul>
+                            <li>Matcha, nasi Padang, dan es teh.</li>
+                            <li>Menggambar dan membuat karya kreatif.</li>
+                            <li>Olahraga dan aktivitas harian.</li>
+                            <li>Menonton konten komedi.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="about-card">
+
+                        <div class="about-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+
+                        <h3>My Journey</h3>
+
+                        <p>
+                            Saya percaya bahwa setiap proses belajar
+                            adalah kesempatan untuk berkembang. Saya ingin
+                            terus mencoba hal baru, menambah pengalaman,
+                            dan meningkatkan kemampuan di bidang teknologi.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-      </div>
-    </div>
-  </header>
+    </section>
 
 
-  <!-- ABOUT -->
-  <section id="about" class="section-padding about-section">
-    <div class="container">
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
 
-      <div class="section-heading">
-        <p class="section-label">KENALI GUA LEBIH DEKAT</p>
-        <h2>About <span>Me</span></h2>
-        <p class="section-description">
-          Sedikit cerita tentang diri gua, hobi, dan hal-hal yang gua suka.
-        </p>
-      </div>
+            <h2 class="section-title">
+                My <span>Projects</span>
+            </h2>
 
-      <div class="row g-4 justify-content-center">
+            <p class="section-subtitle">
+                Beberapa pengalaman dan pencapaian saya.
+            </p>
 
-        <div class="col-md-6">
-          <article class="about-card h-100">
-            <div class="about-icon" aria-hidden="true">01</div>
+            <div class="row g-4">
 
-            <h3>Hal yang Gua Suka</h3>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <img
+                            src="imgproject1.jpeg"
+                            alt="Mobile Legends achievement"
+                            class="project-image"
+                            loading="lazy">
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                Gaming Achievement
+                            </span>
+
+                            <h3>Mobile Legends</h3>
+
+                            <p>
+                                Pengalaman bermain Mobile Legends dengan
+                                pencapaian Immortal selama 5 season dan
+                                pernah mencapai peringkat 543.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <img
+                            src="imgproject2.jpeg"
+                            alt="Kegiatan sosial"
+                            class="project-image"
+                            loading="lazy">
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                Social Activity
+                            </span>
+
+                            <h3>Kegiatan Sosial</h3>
+
+                            <p>
+                                Pengalaman mengikuti kegiatan bersama
+                                Pertamina dan Genius Air Mineral di
+                                SPBU Kepulauan Belitung.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+
+                        <img
+                            src="imgproject3.jpeg"
+                            alt="Pengalaman sebagai peserta KSR 2026"
+                            class="project-image"
+                            loading="lazy">
+
+                        <div class="project-content">
+
+                            <span class="project-tag">
+                                Experience
+                            </span>
+
+                            <h3>KSR 2026</h3>
+
+                            <p>
+                                Pengalaman menjadi peserta KSR 2026
+                                untuk menambah wawasan, pengalaman,
+                                dan kemampuan bekerja sama.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-dark">
+        <div class="container">
+
+            <h2 class="section-title">
+                Get In <span>Touch</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Punya pesan atau ingin terhubung? Kirim pesan di sini.
+            </p>
+
+            <div class="contact-wrapper">
+
+                <form id="contactForm">
+
+                    <div class="mb-4">
+                        <label for="name" class="form-label">
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            placeholder="Masukkan nama kamu"
+                            autocomplete="name"
+                            maxlength="100"
+                            required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="form-label">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="nama@email.com"
+                            autocomplete="email"
+                            maxlength="254"
+                            required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="message" class="form-label">
+                            Pesan
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            placeholder="Tulis pesan kamu..."
+                            rows="5"
+                            maxlength="5000"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" id="submitButton" class="btn-purple w-100">
+                        <i class="bi bi-send"></i>
+                        <span>Kirim Pesan</span>
+                    </button>
+
+                    <!-- Notifikasi status -->
+                    <div
+                        id="formStatus"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite"
+                        hidden>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container text-center">
+
+            <a href="#home" class="footer-brand">
+                AKHYAN<span>.</span>
+            </a>
 
             <p>
-              Gua punya banyak makanan dan minuman favorit.
-              Beberapa yang paling gua suka adalah matcha,
-              nasi Padang, dan es teh manis.
+                Dibuat dengan semangat belajar oleh Hario Nur Akhyan.
             </p>
-          </article>
-        </div>
 
-        <div class="col-md-6">
-          <article class="about-card h-100">
-            <div class="about-icon" aria-hidden="true">02</div>
+            <div class="social-links">
 
-            <h3>Hobi & Ketertarikan</h3>
+                <a
+                    href="https://www.instagram.com/akhyanhh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram Akhyan"
+                    title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
 
-            <p>
-              Gua suka mencoba hal-hal baru dan punya berbagai hobi.
-              Saat senggang, gua biasanya menggambar, berolahraga,
-              atau membuat konten komedi di media sosial.
-              Gua juga tertarik mempelajari teknologi dan web development.
+                <a
+                    href="https://www.tiktok.com/@akhyan14"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok Akhyan"
+                    title="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a
+                    href="https://open.spotify.com/user/31mgy5ewmcguvxsijzuyxumw624m?si=b50c96a7a61343cf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify Akhyan"
+                    title="Spotify">
+                    <i class="bi bi-spotify"></i>
+                </a>
+
+            </div>
+
+            <p class="copyright">
+                &copy; 2026 Hario Nur Akhyan. All rights reserved.
             </p>
-          </article>
-        </div>
-
-      </div>
-
-      <div class="interest-list">
-        <span>Web Development</span>
-        <span>Drawing</span>
-        <span>Sports</span>
-        <span>Content Creation</span>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- PROJECTS -->
-  <section id="project" class="section-padding project-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="section-label">APA YANG SUDAH GUA LAKUKAN?</p>
-        <h2>My <span>Projects</span></h2>
-        <p class="section-description">
-          Beberapa pencapaian dan pengalaman yang menjadi bagian dari perjalanan gua.
-        </p>
-      </div>
-
-      <div class="row g-4">
-
-        <!-- PROJECT 1 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card h-100">
-
-            <div class="project-image-wrapper">
-              <img
-                src="imgproject1.jpeg"
-                class="project-image"
-                alt="Pencapaian rank Immortal di Mobile Legends"
-                loading="lazy"
-              >
-
-              <span class="project-number">01</span>
-            </div>
-
-            <div class="project-body">
-              <span class="project-category">Gaming Achievement</span>
-
-              <h3>Immortal Journey</h3>
-
-              <p>
-                Mencapai rank Immortal selama lima season berturut-turut
-                di Mobile Legends, dengan rekor High Rank 543.
-              </p>
-            </div>
-
-          </article>
-        </div>
-
-
-        <!-- PROJECT 2 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card h-100">
-
-            <div class="project-image-wrapper">
-              <img
-                src="imgproject2.jpeg"
-                class="project-image"
-                alt="Dokumentasi kegiatan sosial bersama Pertamina dan Genius Air Mineral"
-                loading="lazy"
-              >
-
-              <span class="project-number">02</span>
-            </div>
-
-            <div class="project-body">
-              <span class="project-category">Social Activity</span>
-
-              <h3>Kegiatan Sosial</h3>
-
-              <p>
-                Pengalaman berpartisipasi dalam kegiatan sosial
-                bersama Pertamina dan Genius Air Mineral
-                di SPBU Kepulauan Belitung.
-              </p>
-            </div>
-
-          </article>
-        </div>
-
-
-        <!-- PROJECT 3 -->
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card h-100">
-
-            <div class="project-image-wrapper">
-              <img
-                src="imgproject3.jpeg"
-                class="project-image project-image-contain"
-                alt="Poster dan dokumentasi partisipasi KSR 2026"
-                loading="lazy"
-              >
-
-              <span class="project-number">03</span>
-            </div>
-
-            <div class="project-body">
-              <span class="project-category">Event Participation</span>
-
-              <h3>KSR 2026</h3>
-
-              <p>
-                Menjadi salah satu peserta KSR 2026 dan mendapatkan
-                pengalaman melalui kegiatan tersebut.
-              </p>
-            </div>
-
-          </article>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-padding contact-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="section-label">PUNYA SESUATU UNTUK DISAMPAIKAN?</p>
-        <h2>Contact <span>Me</span></h2>
-        <p class="section-description">
-          Punya pertanyaan, ide, atau ingin berdiskusi? Kirim pesan melalui formulir ini.
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-7 col-xl-6">
-
-          <div class="contact-card">
-
-            <!--
-              Form ini masih berupa tampilan.
-              Tambahkan layanan form atau backend agar pesan benar-benar terkirim.
-            -->
-            <form id="contactForm">
-
-              <div class="mb-4">
-                <label for="name" class="form-label">Nama</label>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Masukkan nama lu"
-                  autocomplete="name"
-                  required
-                >
-              </div>
-
-              <div class="mb-4">
-                <label for="email" class="form-label">Email</label>
-
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="nama@email.com"
-                  autocomplete="email"
-                  required
-                >
-              </div>
-
-              <div class="mb-4">
-                <label for="pesan" class="form-label">Pesan</label>
-
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  name="pesan"
-                  rows="5"
-                  placeholder="Tulis pesan lu di sini..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-purple w-100">
-                Kirim Pesan <span aria-hidden="true">↗</span>
-              </button>
-
-              <p id="formNotice" class="form-notice" aria-live="polite"></p>
-
-            </form>
-
-          </div>
 
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container text-center">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-      <a href="#home" class="footer-brand">AKHYAN<span>.</span></a>
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+        const submitButton = document.getElementById("submitButton");
 
-      <p>
-        Dibuat dengan semangat belajar oleh Hario Nur Akhyan.
-      </p>
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-      <p class="copyright">
-        &copy; 2026 Hario Nur Akhyan. All rights reserved.
-      </p>
+            if (!contactForm.reportValidity()) {
+                return;
+            }
 
-    </div>
-  </footer>
+            const originalButton = submitButton.innerHTML;
 
+            submitButton.disabled = true;
+            submitButton.innerHTML =
+                '<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Mengirim...';
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            formStatus.hidden = true;
+            formStatus.className = "form-status";
 
-  <script>
-    const contactForm = document.getElementById("contactForm");
-    const formNotice = document.getElementById("formNotice");
+            try {
+                const formData = new FormData(contactForm);
 
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+                const response = await fetch(
+                    "https://formsubmit.co/ajax/harionurakhyan27@gmail.com",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Accept": "application/json"
+                        },
+                        body: formData
+                    }
+                );
 
-      formNotice.textContent =
-        "Formulir ini belum terhubung ke layanan pengiriman pesan. Pesan belum terkirim.";
+                const result = await response.json();
 
-      formNotice.classList.add("is-visible");
-    });
-  </script>
+                if (!response.ok || result.success === false) {
+                    throw new Error("Pesan belum berhasil dikirim.");
+                }
+
+                formStatus.textContent =
+                    "Pesan berhasil dikirim! Terima kasih sudah menghubungi saya.";
+
+                formStatus.classList.add("success");
+                contactForm.reset();
+
+            } catch (error) {
+                formStatus.textContent =
+                    "Pesan belum berhasil dikirim. Periksa koneksi internet dan coba lagi.";
+
+                formStatus.classList.add("error");
+
+            } finally {
+                formStatus.hidden = false;
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButton;
+            }
+        });
+
+        // Menutup navbar mobile setelah menu dipilih.
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                const navbar = document.getElementById("navbarContent");
+
+                if (navbar.classList.contains("show")) {
+                    bootstrap.Collapse.getOrCreateInstance(navbar).hide();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
+```
