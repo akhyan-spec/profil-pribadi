@@ -65,7 +65,7 @@
     }
 }
 
-/* ---------- RESPONSIVE: SMALL MOBILE ---------- */
+/* ---------- RESPONSIVE: SMALLMOBILE ---------- */
 @media (max-width: 420px) {
     .hero-title {
         font-size: 2.25rem;
