@@ -1,269 +1,111 @@
-```css
-/* ========================================
-   FIX LAYOUT PORTFOLIO AKHYAN
-   Tempel di PALING BAWAH style.css
-======================================== */
-
-/* Perbaikan dasar */
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    margin: 0;
-    min-width: 320px;
-    overflow-x: clip;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* Navbar selalu berada di atas konten */
-.navbar {
-    z-index: 1050 !important;
-    width: 100%;
-    top: 0;
-}
-
-.navbar .nav-link {
-    color: #e0dce5 !important;
-}
-
-.navbar .nav-link:hover {
-    color: #d000ff !important;
-}
-
-/* Berikan ruang agar section tidak bertabrakan */
-section {
-    position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    overflow: visible;
-    scroll-margin-top: 85px;
-}
-
-#home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 120px;
-    padding-bottom: 80px;
-}
-
-#about,
-#projects,
-#contact {
-    display: block;
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-/* Judul dan deskripsi section */
-.section-title {
-    position: static;
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 0 15px;
-    line-height: 1.3;
-}
-
-.section-subtitle {
-    position: static;
-    display: block;
-    text-align: center;
-    margin: 0 auto 40px;
-    line-height: 1.8;
-}
-
-/* Grid Bootstrap */
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 1.5rem;
-}
-
-/* Kartu About */
-.about-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    overflow-wrap: anywhere;
-}
-
-.about-card p,
-.about-card li {
-    line-height: 1.9;
-}
-
-/* Kartu Projects */
-.project-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    overflow: hidden;
-}
-
-.project-card .project-image {
-    display: block;
-    width: 100%;
-    height: 230px;
-    min-height: 0;
-    flex-shrink: 0;
-    object-fit: cover;
-}
-
-.project-content {
-    position: relative;
-    display: block;
-    flex: 1 1 auto;
-    padding: 24px;
-}
-
-.project-content h3 {
-    position: static;
-    margin: 0 0 12px;
-    line-height: 1.5;
-}
-
-.project-content p {
-    position: static;
-    margin: 0;
-    line-height: 1.8;
-    overflow-wrap: anywhere;
-}
-
-/* Contact terpisah dari Projects */
-#contact {
-    clear: both;
-    position: relative;
-    z-index: 1;
-    background-color: #0b0b12;
-}
-
-#contact .container {
-    position: relative;
-}
-
-.contact-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 750px;
-    height: auto;
-    margin: 0 auto;
-    padding: 30px;
-}
-
-#contact form {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-#contact .mb-4 {
-    display: block;
-    width: 100%;
-    margin-bottom: 24px !important;
-}
-
-#contact .form-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-#contact .form-control {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
-
-#contact textarea.form-control {
-    min-height: 140px;
-    resize: vertical;
-}
-
-#contact #submitButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 50px;
-}
-
-/* Footer */
-.site-footer {
-    position: relative;
-    clear: both;
-    width: 100%;
-}
-
-/* Tampilan tablet dan HP */
-@media (max-width: 991.98px) {
-    #home {
-        padding-top: 120px;
-    }
-
-    #about,
-    #projects,
-    #contact {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-
-    .navbar-collapse {
-        background: #0b0b12;
-        padding: 15px 20px;
-        border: 1px solid rgba(192, 0, 255, 0.2);
-        border-radius: 12px;
-        margin-top: 12px;
-    }
-
-    .navbar-nav .nav-link {
-        margin-left: 0;
-        padding: 10px 0;
-    }
-}
-
 @media (max-width: 767.98px) {
-    #home {
-        min-height: auto;
-        padding-top: 120px;
-        padding-bottom: 65px;
+    .hero-section {
+        padding: 125px 0 65px;
+        text-align: center;
     }
 
-    #about,
-    #projects,
-    #contact {
-        padding-top: 65px;
-        padding-bottom: 65px;
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-description {
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 0.96rem;
+    }
+
+    .hero-badge {
+        font-size: 0.76rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.35rem, 10vw, 3.4rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-image-wrapper {
+        width: min(78%, 290px);
+        margin-top: 4px;
+    }
+
+    .hero-section .row {
+        row-gap: 28px !important;
+    }
+
+    .section-dark,
+    #projects {
+        padding: 68px 0;
     }
 
     .section-subtitle {
-        margin-bottom: 30px;
+        margin-bottom: 32px;
+        font-size: 0.92rem;
     }
 
-    .project-card .project-image {
+    .about-card {
+        padding: 25px;
+    }
+
+    .project-image {
         height: 220px;
+        flex-basis: 220px;
+    }
+
+    .project-content {
+        padding: 23px;
     }
 
     .contact-wrapper {
-        padding: 20px;
+        padding: 22px;
+        border-radius: 17px;
+    }
+
+    .site-footer {
+        padding-top: 34px;
     }
 }
 
-@media (max-width: 400px) {
-    .project-card .project-image {
-        height: 190px;
+/* ---------- RESPONSIVE: SMALL MOBILE ---------- */
+@media (max-width: 420px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .hero-image-wrapper {
+        width: 82%;
+    }
+
+    .btn-purple,
+    .btn-outline-purple {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .project-image {
+        height: 195px;
+        flex-basis: 195px;
     }
 
     .contact-wrapper {
-        padding: 16px;
+        padding: 17px;
     }
 }
-```
+
+/* ---------- REDUCED MOTION ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
