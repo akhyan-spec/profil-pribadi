@@ -5,19 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="theme-color" content="#08080c">
-  <meta name="description" content="Portofolio pribadi Hario Nur Akhyan, pelajar dan web developer pemula dari SMKN 1 Tanjungpandan.">
+  <meta name="description" content="Portofolio Hario Nur Akhyan, pelajar SMKN 1 Tanjungpandan yang lagi ngulik web development, Python, dan UI design.">
+  <meta name="author" content="Hario Nur Akhyan">
 
-  <title>Hario Nur Akhyan | Personal Portfolio</title>
+  <meta property="og:title" content="Hario Nur Akhyan | Web Developer Pemula">
+  <meta property="og:description" content="Portofolio Hario Nur Akhyan: web development, Python, UI design, dan pencapaian yang lagi gua bangun satu per satu.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hario Nur Akhyan | Web Developer Pemula">
+  <meta name="twitter:description" content="Portofolio Hario Nur Akhyan: web development, Python, UI design, dan pencapaian yang lagi gua bangun satu per satu.">
+
+  <title>Hario Nur Akhyan | Web Developer Pemula</title>
+
+  <link rel="icon" href="favicon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
   >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <a class="skip-link" href="#home">Langsung ke konten</a>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top">
@@ -50,11 +66,15 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#project">Projects</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#achievements">Achievements</a>
           </li>
         </ul>
       </div>
@@ -64,31 +84,41 @@
 
 
   <!-- HERO -->
-  <header id="home" class="hero-section">
+  <header id="home" class="hero-section" tabindex="-1">
     <div class="container">
       <div class="hero-content">
 
         <div class="hero-image-wrapper">
-          <img
-            src="https://i.pinimg.com/474x/93/44/40/93444022aabf9ab161e945c579417786.jpg"
-            alt="Foto profil Hario Nur Akhyan"
-            class="hero-image"
-            width="200"
-            height="200"
+          <button
+            type="button"
+            class="hero-image-toggle"
+            id="profileToggle"
+            aria-pressed="false"
+            aria-label="Tampilkan foto profil kedua"
           >
+            <img
+              src="https://i.pinimg.com/474x/93/44/40/93444022aabf9ab161e945c579417786.jpg"
+              alt="Foto profil Hario Nur Akhyan"
+              class="hero-image"
+              id="profileImage"
+              width="200"
+              height="200"
+            >
+          </button>
         </div>
 
-        <p class="hero-greeting">HALO, SELAMAT DATANG DI WEBSITE GUA</p>
+        <p class="hero-greeting">YO, WELCOME TO MY CORNER</p>
 
         <h1>Hario Nur <span>Akhyan</span></h1>
 
         <p class="hero-description">
-          Pelajar SMKN 1 Tanjungpandan yang tertarik dengan
-          <span>Web Development</span>, teknologi, dan hal-hal baru.
+          Pelajar SMKN 1 Tanjungpandan yang lagi belajar tipis tipis
+          <span>web development</span>, Python, dan UI design.
+          Masih pemula, tapi gas terus buat belajar hal baru, gw juga hobi buat main game dan nonton anime.
         </p>
 
         <div class="hero-buttons">
-          <a href="#project" class="btn btn-purple">
+          <a href="#projects" class="btn btn-purple">
             Lihat Proyek
           </a>
 
@@ -114,7 +144,7 @@
         <p class="section-label">KENALI GUA LEBIH DEKAT</p>
         <h2>About <span>Me</span></h2>
         <p class="section-description">
-          Sedikit cerita tentang diri gua, hobi, dan hal-hal yang gua suka.
+          Sedikit cerita soal gua, hobi, dan hal-hal yang bikin gua betah ngulik.
         </p>
       </div>
 
@@ -127,9 +157,10 @@
             <h3>Hal yang Gua Suka</h3>
 
             <p>
-              Gua punya banyak makanan dan minuman favorit.
-              Beberapa yang paling gua suka adalah matcha,
-              nasi Padang, dan es teh manis.
+              Gua tim matcha, nasi Padang, dan es teh manis.
+              Simpel, tapi bikin hari langsung mood.
+              Atau ga cukup ketemu ama orang yang menurut gw spesial
+              aja, itu juga bikin gw bahagia.
             </p>
           </article>
         </div>
@@ -138,13 +169,13 @@
           <article class="about-card h-100">
             <div class="about-icon" aria-hidden="true">02</div>
 
-            <h3>Hobi & Ketertarikan</h3>
+            <h3>Hobi &amp; Ketertarikan</h3>
 
             <p>
-              Gua suka mencoba hal-hal baru dan punya berbagai hobi.
-              Saat senggang, gua biasanya menggambar, berolahraga,
-              atau membuat konten komedi di media sosial.
-              Gua juga tertarik mempelajari teknologi dan web development.
+              Gua suka nyoba hal baru: gambar, olahraga,nonton anime,main game, bikin konten komedi,
+              dan ngulik teknologi. Sekarang lagi fokus belajar
+              web development, Python, dan UI design. Gua pengen bikin hal yang bermanfaat
+              dan bisa dipake orang lain.
             </p>
           </article>
         </div>
@@ -153,6 +184,8 @@
 
       <div class="interest-list">
         <span>Web Development</span>
+        <span>Python</span>
+        <span>UI Design</span>
         <span>Drawing</span>
         <span>Sports</span>
         <span>Content Creation</span>
@@ -162,31 +195,157 @@
   </section>
 
 
-  <!-- PROJECTS -->
-  <section id="project" class="section-padding project-section">
+  <!-- SKILLS -->
+  <section id="skills" class="section-padding skills-section">
     <div class="container">
 
       <div class="section-heading">
-        <p class="section-label">APA YANG SUDAH GUA LAKUKAN?</p>
+        <p class="section-label">SKILLS YANG LAGI GUA ASAH</p>
+        <h2>My <span>Skills</span></h2>
+        <p class="section-description">
+          Gw Masih pemula, tapi semua ini lagi gua pelajari dan praktekin satu per satu.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <article class="skill-card h-100">
+            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>HTML</h3>
+            <span class="skill-level">Pemula</span>
+          </article>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <article class="skill-card h-100">
+            <div class="skill-icon" aria-hidden="true">CSS</div>
+            <h3>CSS</h3>
+            <span class="skill-level">Pemula</span>
+          </article>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <article class="skill-card h-100">
+            <div class="skill-icon" aria-hidden="true">JS</div>
+            <h3>JavaScript</h3>
+            <span class="skill-level">Pemula</span>
+          </article>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <article class="skill-card h-100">
+            <div class="skill-icon" aria-hidden="true">B</div>
+            <h3>Bootstrap</h3>
+            <span class="skill-level">Pemula</span>
+          </article>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <article class="skill-card h-100">
+            <div class="skill-icon" aria-hidden="true">PY</div>
+            <h3>Python</h3>
+            <span class="skill-level">Pemula</span>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section-padding project-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="section-label">KARYA YANG LAGI GUA BANGUN</p>
         <h2>My <span>Projects</span></h2>
         <p class="section-description">
-          Beberapa pencapaian dan pengalaman yang menjadi bagian dari perjalanan gua.
+          Proyek yang gua rancang buat latihan sekaligus solve masalah kecil di sekitar.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-8 col-lg-6">
+          <article class="project-card h-100">
+
+            <div class="project-image-wrapper project-image-wrapper-contain">
+              <picture>
+                <source srcset="assets/img/imgproject5.webp" type="image/webp">
+                <img
+                  src="imgproject5.jpg"
+                  class="project-image project-image-contain"
+                  alt="Rancangan aplikasi kasir karya Hario Nur Akhyan"
+                  width="1000"
+                  height="1416"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+
+              <span class="project-number">01</span>
+            </div>
+
+            <div class="project-body">
+              <span class="project-category">App Design</span>
+
+              <h3>Rancangan Aplikasi Kasir</h3>
+
+              <p>
+                Rancangan aplikasi kasir yang gua bikin biar proses transaksi
+                jadi lebih gampang dan nggak ribet. Fokusnya di tampilan
+                yang simpel dan gampang dipakai.BTW gw bikin ini ama kelompok gw ya
+              </p>
+
+              <div class="project-tech">
+                <span>UI Design</span>
+                <span>Framework</span>
+              </div>
+            </div>
+
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section-padding achievement-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="section-label">JEJAK YANG UDAH GUA TINGGALKAN</p>
+        <h2>My <span>Achievements</span></h2>
+        <p class="section-description">
+          Beberapa pencapaian dan pengalaman yang jadi bagian dari perjalanan gua.
         </p>
       </div>
 
       <div class="row g-4">
 
-        <!-- PROJECT 1 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- ACHIEVEMENT 1 -->
+        <div class="col-md-6 col-lg-3">
           <article class="project-card h-100">
 
             <div class="project-image-wrapper">
-              <img
-                src="imgproject1.jpeg"
-                class="project-image"
-                alt="Pencapaian rank Immortal di Mobile Legends"
-                loading="lazy"
-              >
+              <picture>
+                <source srcset="assets/img/imgproject1.webp" type="image/webp">
+                <img
+                  src="imgproject1.jpeg"
+                  class="project-image"
+                  alt="Pencapaian rank Immortal di Mobile Legends"
+                  width="1000"
+                  height="1328"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
 
               <span class="project-number">01</span>
             </div>
@@ -194,11 +353,12 @@
             <div class="project-body">
               <span class="project-category">Gaming Achievement</span>
 
-              <h3>Immortal Journey</h3>
+              <h3>Immortal Boskuh</h3>
 
               <p>
-                Mencapai rank Immortal selama lima season berturut-turut
-                di Mobile Legends, dengan rekor High Rank 543.
+                Nembus rank Immortal lima season berturut-turut di Mobile Legends
+                dengan rekor High Rank 543. Grind-nya nggak main-main. IMO >> All prestasi
+                (Just Kidding, tapi ini pencapaian yang bikin gua bangga sama diri sendiri).
               </p>
             </div>
 
@@ -206,17 +366,23 @@
         </div>
 
 
-        <!-- PROJECT 2 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- ACHIEVEMENT 2 -->
+        <div class="col-md-6 col-lg-3">
           <article class="project-card h-100">
 
             <div class="project-image-wrapper">
-              <img
-                src="imgproject2.jpeg"
-                class="project-image"
-                alt="Dokumentasi kegiatan sosial bersama Pertamina dan Genius Air Mineral"
-                loading="lazy"
-              >
+              <picture>
+                <source srcset="assets/img/imgproject2.webp" type="image/webp">
+                <img
+                  src="imgproject2.jpeg"
+                  class="project-image"
+                  alt="Dokumentasi kegiatan sosial bersama Pertamina dan Genius Air Mineral"
+                  width="1000"
+                  height="562"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
 
               <span class="project-number">02</span>
             </div>
@@ -227,9 +393,9 @@
               <h3>Kegiatan Sosial</h3>
 
               <p>
-                Pengalaman berpartisipasi dalam kegiatan sosial
-                bersama Pertamina dan Genius Air Mineral
-                di SPBU Kepulauan Belitung.
+                Ikut kegiatan sosial bareng Pertamina dan Genius Air Mineral
+                di SPBU Kepulauan Belitung. Seru sekaligus nambah pengalaman.
+                Buat yang nanya "kok mau ikut kegiatan sosial?" ya gua jawab aja, karena pahlawan Himmel akan melakukan hal yang sama. wkwkwk
               </p>
             </div>
 
@@ -237,17 +403,23 @@
         </div>
 
 
-        <!-- PROJECT 3 -->
-        <div class="col-md-6 col-lg-4">
+        <!-- ACHIEVEMENT 3 -->
+        <div class="col-md-6 col-lg-3">
           <article class="project-card h-100">
 
-            <div class="project-image-wrapper">
-              <img
-                src="imgproject3.jpeg"
-                class="project-image project-image-contain"
-                alt="Poster dan dokumentasi partisipasi KSR 2026"
-                loading="lazy"
-              >
+            <div class="project-image-wrapper project-image-wrapper-contain">
+              <picture>
+                <source srcset="assets/img/imgproject3.webp" type="image/webp">
+                <img
+                  src="imgproject3.jpeg"
+                  class="project-image project-image-contain"
+                  alt="Poster dan dokumentasi partisipasi KSR 2026"
+                  width="702"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
 
               <span class="project-number">03</span>
             </div>
@@ -258,8 +430,46 @@
               <h3>KSR 2026</h3>
 
               <p>
-                Menjadi salah satu peserta KSR 2026 dan mendapatkan
-                pengalaman melalui kegiatan tersebut.
+                Jadi peserta KSR 2026 dan dapet pengalaman baru
+                yang bikin makin terbuka sama banyak hal. walaupun ga lolos di regional
+                at leats gw jadi tau kalo banyak orang yang lebih pintar dari gw
+                dan gw jadi punya semangat belajar
+              </p>
+            </div>
+
+          </article>
+        </div>
+
+
+        <!-- ACHIEVEMENT 4 -->
+        <div class="col-md-6 col-lg-3">
+          <article class="project-card h-100">
+
+            <div class="project-image-wrapper project-image-wrapper-contain">
+              <picture>
+                <source srcset="assets/img/imgproject4.webp" type="image/webp">
+                <img
+                  src="imgproject4.jpg"
+                  class="project-image project-image-contain"
+                  alt="Sertifikat medali perak Festival Sains tingkat nasional"
+                  width="1200"
+                  height="850"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </picture>
+
+              <span class="project-number">04</span>
+            </div>
+
+            <div class="project-body">
+              <span class="project-category">National Achievement</span>
+
+              <h3>Medali Perak Festival Sains</h3>
+
+              <p>
+                Bawa pulang medali perak di Festival Sains tingkat nasional.
+                Pengalaman yang gw ga ekspek bakal gw alamin, but thanks teman teman yang udah ajakin aku ikut fesanas
               </p>
             </div>
 
@@ -267,86 +477,7 @@
         </div>
 
       </div>
-    </div>
-  </section>
 
-
-  <!-- CONTACT -->
-  <section id="contact" class="section-padding contact-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <p class="section-label">PUNYA SESUATU UNTUK DISAMPAIKAN?</p>
-        <h2>Contact <span>Me</span></h2>
-        <p class="section-description">
-          Punya pertanyaan, ide, atau ingin berdiskusi? Kirim pesan melalui formulir ini.
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-7 col-xl-6">
-
-          <div class="contact-card">
-
-            <!--
-              Form ini masih berupa tampilan.
-              Tambahkan layanan form atau backend agar pesan benar-benar terkirim.
-            -->
-            <form id="contactForm">
-
-              <div class="mb-4">
-                <label for="name" class="form-label">Nama</label>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Masukkan nama lu"
-                  autocomplete="name"
-                  required
-                >
-              </div>
-
-              <div class="mb-4">
-                <label for="email" class="form-label">Email</label>
-
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="nama@email.com"
-                  autocomplete="email"
-                  required
-                >
-              </div>
-
-              <div class="mb-4">
-                <label for="pesan" class="form-label">Pesan</label>
-
-                <textarea
-                  class="form-control"
-                  id="pesan"
-                  name="pesan"
-                  rows="5"
-                  placeholder="Tulis pesan lu di sini..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-purple w-100">
-                Kirim Pesan <span aria-hidden="true">↗</span>
-              </button>
-
-              <p id="formNotice" class="form-notice" aria-live="polite"></p>
-
-            </form>
-
-          </div>
-
-        </div>
-      </div>
     </div>
   </section>
 
@@ -357,9 +488,66 @@
 
       <a href="#home" class="footer-brand">AKHYAN<span>.</span></a>
 
-      <p>
-        Dibuat dengan semangat belajar oleh Hario Nur Akhyan.
+      <p class="footer-tagline">
+        Masih belajar. Dibuat dengan kegabutan oleh Hario Nur Akhyan.
       </p>
+
+      <div class="footer-social">
+        <a
+          href="https://www.instagram.com/akhyanhh"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram Akhyan"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@akhyan14"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok Akhyan"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+        </a>
+
+        <a
+          href="https://open.spotify.com/user/31mgy5ewmcguvxsijzuyxumw624m?si=b50c96a7a61343cf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Spotify Akhyan"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+        </a>
+
+        <a
+          href="mailto:harionurakhyan27@gmail.com"
+          aria-label="Email Hario Nur Akhyan"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="footer-links" aria-label="Navigasi footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+      </nav>
+
+      <div class="footer-meta">
+        <a href="mailto:harionurakhyan27@gmail.com">harionurakhyan27@gmail.com</a>
+        <span>Indonesia</span>
+      </div>
 
       <p class="copyright">
         &copy; 2026 Hario Nur Akhyan. All rights reserved.
@@ -369,19 +557,150 @@
   </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M12 5 4 13h5v6h6v-6h5z"/>
+    </svg>
+  </button>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
 
   <script>
-    const contactForm = document.getElementById("contactForm");
-    const formNotice = document.getElementById("formNotice");
+    const profileToggle = document.getElementById("profileToggle");
+    const profileImage = document.getElementById("profileImage");
 
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+    const primaryProfile = {
+      src: profileImage.getAttribute("src"),
+      alt: profileImage.alt,
+    };
 
-      formNotice.textContent =
-        "Formulir ini belum terhubung ke layanan pengiriman pesan. Pesan belum terkirim.";
+    const secondaryProfile = {
+      src: "pfp1.png",
+      alt: "Foto profil kedua Hario Nur Akhyan",
+    };
 
-      formNotice.classList.add("is-visible");
+    const secondaryPreload = new Image();
+    secondaryPreload.src = secondaryProfile.src;
+
+    profileToggle.addEventListener("click", function () {
+      const showingSecondary =
+        profileToggle.getAttribute("aria-pressed") === "true";
+
+      const nextProfile = showingSecondary ? primaryProfile : secondaryProfile;
+
+      profileImage.src = nextProfile.src;
+      profileImage.alt = nextProfile.alt;
+
+      profileToggle.setAttribute("aria-pressed", String(!showingSecondary));
+      profileToggle.setAttribute(
+        "aria-label",
+        showingSecondary
+          ? "Tampilkan foto profil kedua"
+          : "Kembali ke foto profil utama"
+      );
+    });
+
+    const navLinks = document.querySelectorAll(".site-nav .nav-link");
+    const navSections = Array.from(navLinks)
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    const setActiveNav = (activeLink) => {
+      navLinks.forEach((link) => {
+        const isActive = link === activeLink;
+        link.classList.toggle("active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+
+    if ("IntersectionObserver" in window) {
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            const activeLink = document.querySelector(
+              `.site-nav .nav-link[href="#${entry.target.id}"]`
+            );
+
+            if (activeLink) {
+              setActiveNav(activeLink);
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" }
+      );
+
+      navSections.forEach((section) => navObserver.observe(section));
+    }
+
+    const navbarCollapse = document.getElementById("navbarNav");
+
+    if (navbarCollapse) {
+      const collapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, {
+        toggle: false,
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (navbarCollapse.classList.contains("show")) {
+            collapse.hide();
+          }
+        });
+      });
+    }
+
+    if (
+      "IntersectionObserver" in window &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      const revealTargets = document.querySelectorAll(
+        ".section-heading, .about-card, .skill-card, .project-card"
+      );
+
+      revealTargets.forEach((target, index) => {
+        target.classList.add("reveal");
+        target.style.animationDelay = `${(index % 4) * 80}ms`;
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      revealTargets.forEach((target) => revealObserver.observe(target));
+    }
+
+    const backToTop = document.getElementById("backToTop");
+
+    const toggleBackToTop = () => {
+      backToTop.classList.toggle("is-visible", window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 
