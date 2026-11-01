@@ -747,6 +747,44 @@ textarea {
         width: 82%;
     }
 
+   /* PAKSA BORDER UNGU NEON */
+.about-card,
+.project-card,
+.contact-wrapper {
+    border: 1px solid #a855f7 !important;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.18) !important;
+}
+
+.about-card:hover,
+.project-card:hover {
+    border-color: #d8b4fe !important;
+    box-shadow: 0 0 24px rgba(168, 85, 247, 0.35) !important;
+}
+
+/* Border input contact */
+#contact .form-control {
+    border: 1px solid #8b5cf6 !important;
+}
+
+#contact .form-control:focus {
+    border-color: #d8b4fe !important;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2) !important;
+}
+
+/* Navbar lebih jelas */
+.navbar {
+    background: #08080d !important;
+    border-bottom: 1px solid #6b21a8 !important;
+}
+
+.navbar .nav-link {
+    color: #f5f3fa !important;
+}
+
+.navbar .nav-link:hover {
+    color: #c084fc !important;
+}
+
     .btn-purple,
     .btn-outline-purple {
         width: 100%;
