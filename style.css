@@ -1,191 +1,269 @@
 ```css
-/* =========================
-   GLOBAL
-========================= */
+/* ========================================
+   FIX LAYOUT PORTFOLIO AKHYAN
+   Tempel di PALING BAWAH style.css
+======================================== */
 
-:root {
-    --bg: #08080d;
-    --bg-card: #11111a;
-    --purple: #c000ff;
-    --purple-light: #dc73ff;
-    --text: #f5f5f7;
-    --muted: #a3a3b2;
-    --border: rgba(192, 0, 255, 0.22);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Perbaikan dasar */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px;
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    overflow-x: hidden;
-    line-height: 1.6;
+    margin: 0;
+    min-width: 320px;
+    overflow-x: clip;
 }
 
 img {
-    display: block;
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
-}
-
-button,
-input,
-textarea {
-    font: inherit;
-}
-
-section {
-    padding: 100px 0;
-    scroll-margin-top: 75px;
-}
-
-.container {
+/* Navbar selalu berada di atas konten */
+.navbar {
+    z-index: 1050 !important;
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    top: 0;
 }
 
+.navbar .nav-link {
+    color: #e0dce5 !important;
+}
+
+.navbar .nav-link:hover {
+    color: #d000ff !important;
+}
+
+/* Berikan ruang agar section tidak bertabrakan */
+section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    scroll-margin-top: 85px;
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+#about,
+#projects,
+#contact {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+/* Judul dan deskripsi section */
 .section-title {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    font-weight: 800;
-    line-height: 1.2;
+    position: static;
+    display: block;
+    width: 100%;
     text-align: center;
-    margin-bottom: 15px;
-}
-
-.section-title span,
-.footer-brand span {
-    color: var(--purple);
+    margin: 0 0 15px;
+    line-height: 1.3;
 }
 
 .section-subtitle {
-    max-width: 650px;
-    margin: 0 auto 50px;
-    color: var(--muted);
+    position: static;
+    display: block;
     text-align: center;
+    margin: 0 auto 40px;
+    line-height: 1.8;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-    background: rgba(8, 8, 13, 0.94);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 15px 0;
+/* Grid Bootstrap */
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
 }
 
-.navbar-brand {
-    color: white !important;
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 1px;
+/* Kartu About */
+.about-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow-wrap: anywhere;
 }
 
-.navbar-brand span {
-    color: var(--purple);
+.about-card p,
+.about-card li {
+    line-height: 1.9;
 }
 
-.navbar-nav .nav-link {
-    color: #c5c5d0;
-    font-size: 0.9rem;
-    margin-left: 22px;
-    transition: color 0.3s ease;
+/* Kartu Projects */
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    color: var(--purple-light);
+.project-card .project-image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    min-height: 0;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
-.navbar-toggler {
-    border: 1px solid var(--border);
+.project-content {
+    position: relative;
+    display: block;
+    flex: 1 1 auto;
+    padding: 24px;
 }
 
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.15rem var(--border);
+.project-content h3 {
+    position: static;
+    margin: 0 0 12px;
+    line-height: 1.5;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1);
+.project-content p {
+    position: static;
+    margin: 0;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
+/* Contact terpisah dari Projects */
+#contact {
+    clear: both;
+    position: relative;
+    z-index: 1;
+    background-color: #0b0b12;
+}
 
-/* =========================
-   BUTTONS
-========================= */
+#contact .container {
+    position: relative;
+}
 
-.btn-purple,
-.btn-outline-purple {
-    display: inline-flex;
+.contact-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#contact form {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#contact .mb-4 {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px !important;
+}
+
+#contact .form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contact .form-control {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+#contact textarea.form-control {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#contact #submitButton {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    min-height: 46px;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    text-align: center;
-    transition: 0.3s ease;
+    width: 100%;
+    min-height: 50px;
 }
 
-.btn-purple {
-    color: white;
-    background: var(--purple);
-    border: 1px solid var(--purple);
-}
-
-.btn-purple:hover {
-    color: white;
-    background: #a100d6;
-    border-color: #a100d6;
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(192, 0, 255, 0.3);
-}
-
-.btn-purple:disabled {
-    opacity: 0.7;
-    cursor: wait;
-    transform: none;
-    box-shadow: none;
-}
-
-.btn-outline-purple {
-    color: white;
-    background: transparent;
-    border: 1px solid var(--border);
-}
-
-.btn-outline-purple:hover {
-    color: var(--purple-light);
-    border-color: var(--purple);
-    transform: translateY(-3px);
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero-section {
+/* Footer */
+.site-footer {
     position: relative;
-   
+    clear: both;
+    width: 100%;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 991.98px) {
+    #home {
+        padding-top: 120px;
+    }
+
+    #about,
+    #projects,
+    #contact {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .navbar-collapse {
+        background: #0b0b12;
+        padding: 15px 20px;
+        border: 1px solid rgba(192, 0, 255, 0.2);
+        border-radius: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #home {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 65px;
+    }
+
+    #about,
+    #projects,
+    #contact {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .section-subtitle {
+        margin-bottom: 30px;
+    }
+
+    .project-card .project-image {
+        height: 220px;
+    }
+
+    .contact-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .project-card .project-image {
+        height: 190px;
+    }
+
+    .contact-wrapper {
+        padding: 16px;
+    }
+}
+```
